@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;500;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;1,300;1,900&family=Oswald:wght@200;500;600&display=swap');
+
+:root {
+    --main-color: #FFFFFF;
+    --primary-color: #414f6b;
+
+    --lato-font: "Lato", Helvetica, sans-serif;
+    --Oswald-font: "Oswald", Helvetica, sans-serif;
+}
+
+
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* Percentage of user's browser font-size setting */
+    font-size: 62.5%;
+}
+
+body {
+    /* font-family: "Rubik", sans-serif; */
+    line-height: 1;
+    font-weight: 400;
+    color: #555;
+    /* Only works if there is nothing absolutely positioned in relation to body */
+    overflow-x: hidden;
+}
+
+section {
+    padding: 4.8rem 0 9.6rem 0;
+    min-height: 100vh;
+}
+
+p {
+    text-align: justify;
+}
+
+nav {
+    justify-content: space-between;
+}
+
+/**************************/
+/* GENERAL REUSABLE COMPONENTS */
+/**************************/
+
+.container {
+    /* 1140px */
+    max-width: 120rem;
+    padding: 0 3.2rem;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    row-gap: 9.6rem;
+    /* margin-bottom: 9.6rem; */
+}
+
+.flex--wrap {
+    flex-wrap: wrap;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.center-items {
+    justify-content: center;
+}
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+    font-weight: 700;
+    color: var(--primary-color);
+    letter-spacing: -0.5px;
+}
+
+.heading-primary {
+    font-size: 5.2rem;
+    line-height: 1.05;
+    margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 3.5rem;
+}
+
+.heading-tertiary {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
+}
+
+.subheading {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    /* color: var(--primary-color); */
+    text-transform: uppercase;
+    /* margin-bottom: 1.6rem; */
+    letter-spacing: 0.75px;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    gap: 1.6rem;
+}
+
+.list-item {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    line-height: 1.2;
+}
+
+/* SHOW/HIDE */
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+
+/**************************/
+/* SECTIONS */
+/**************************/
+
+/* HERO SECTION  */
+.hero {
+    background: url('/assets/imgs/CT_SkillTest_v3_hero.jpg') no-repeat center/cover;
+    position: relative;
+    font-family: var();
+}
+
+.hero nav {
+    padding: 0 9.6rem;
+}
+
+.hero nav a {
+    color: var(--main-color);
+}
+
+/**************************/
+/* MIDDLE WRAPPER*/
+/**************************/
+
+.middle-wrapper {
+    background: url('/assets/imgs/CT_SkillTest_v3_mid.jpg') no-repeat center/cover;
+    position: relative;
+}
+
+.description {
+    padding: 2rem 9.6rem;
+}
+
+.description header {
+    position: relative;
+    display: flex;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+    align-items: flex-end;
+}
+
+.step-number {
+    font-size: 11.3rem;
+    color: #666699;
+    font-family: var(--Oswald-font);
+}
+
+.step-word {
+    position: absolute;
+    left: 15rem;
+    font-family: var(--lato-font);
+}
+
+.description p {
+    padding: 2rem 9.6rem;
+    font-size: 2rem;
+}
+
+/**************************/
+/* FINAL WRAPPER*/
+/**************************/
+
+.final-wrapper{
+    padding-bottom: 0;
+}
+
+.final-wrapper .description .step-number {
+    color: #a0a7b5;
+    font-family: var(--Oswald-font);
+}
+
+.final-wrapper .description .step-word {
+    color: #414f6b;
+    font-family: var(--lato-font);
+}
+
+.final-wrapper nav {
+    padding: 0 12rem;
+    background: #414f6b;
+    font-family: var(--lato-font);
+}
+
+.final-wrapper nav li {
+
+    font-weight: 500;
+    height: 100%;
+    padding: 1.5rem;
+    color: #9299a8;
+    font-weight: bold;
+    transition: 500ms all;
+}
+
+.final-wrapper nav li.active,
+.final-wrapper nav li:hover {
+    background: #9299a8;
+    color: #414f6b;
+}
+
+.final-wrapper .slides{
+    position: relative;
+    min-height: 75vh;
+}
+
+.final-wrapper .slides .tab{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.final-wrapper .slides .tab img {
+    width: 100%;
+    height: 75vh;
+}
+
+.final-wrapper .slides .tab .content{
+    padding: 1rem 5rem 1rem 1rem;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    top: 10rem;
+    left: 15rem;
+}
+
+.final-wrapper .slides .tab .content h2{
+    font-weight: 600;
+    color: #414f6b;
+    font-family: var(--Oswald-font);
+}
+
+.final-wrapper .slides .tab .content td{
+    padding: 1rem 5rem 1rem 1rem;
+    font-size: 1.5rem;
+    font-family: var(--lato-font);
+}
+
+/**************************/
+/* FOOTER */
+/**************************/
+
+footer{
+    position: relative;
+}
+
+.footer{
+    padding: 0 9.6rem;
+    justify-content: space-between;
+    position: relative;
+}
+
+footer i{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+footer::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(65, 79, 107, 0.8);
+}
+
+/**************************/
+/* FIXED NAVBAR */
+/**************************/
+
+.fixed-navbar {
+    position: fixed;
+    padding: 1.5rem 9.6rem;
+}
+
+/**************************/
+/* CAROUSEL */
+/**************************/
+
+.carousel {
+    background: url('/assets/imgs/carousel-bg.jpg') no-repeat center/cover;
+    padding: 3.7rem;
+    position: relative;
+}
+
+.carousel::after {
+    content: '';
+    width: 100%;
+    background-color: rgba(55, 68, 90, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+.column {
+    float: left;
+    width: 16.66%;
+    z-index: 2;
+    margin: 0 1rem;
+}
+
+.carousel div .dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+/**************************/
+/* COMPONENT */
+/**************************/
+
+.sticky {
+    position: sticky;
+    padding: 1.5rem 9.6rem;
+}
+
+/* HELPER/SETTINGS CLASSES */
+.margin-right-sm {
+    margin-right: 1.6rem !important;
+}
+
+.margin-right-md {
+    margin-right: 4.8rem !important;
+}
+
+.margin-bottom-sm {
+    margin-bottom: 1.6rem !important;
+}
+
+.margin-bottom-md {
+    margin-bottom: 4.8rem !important;
+}
+
+.center-text {
+    text-align: center;
+}
